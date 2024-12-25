@@ -11,4 +11,4 @@ def lambda_handler(event, context):
         print(f"Random Quote: '{content}' - {author}")
         print("v1.1")
     else:
-        print(f"Failed to retrieve a random quote. Status code: {response.status_code}")
+        print(f"Failed to retrieve a random quote., Status code: {response.status_code}")
