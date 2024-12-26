@@ -1,11 +1,9 @@
 version: 0.2
 phases:
   install:
-  
     runtime-versions:
       python: 3.12
     commands:
-      - apt-get update && apt-get install -y ca-certificates
       - echo "Installing dependencies..."
       - pip install -r requirements.txt -t lib
   build:
