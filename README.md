@@ -2,6 +2,8 @@
 
 Random Quote Fetcher - AWS Lambda Function
 
+This project demonstrates my ability to create and deploy serverless applications using AWS. It features a Python-based Lambda function that fetches random quotes from an API and uses an automated pipeline to install dependencies, package the code, and update the function.
+
 # Overview
 
 This AWS Lambda function fetches a random quote from the "ZenQuotes" API and logs it to the console. It is designed as a simple example of integrating external APIs with AWS Lambda.
