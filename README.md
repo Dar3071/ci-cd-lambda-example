@@ -4,11 +4,11 @@ Random Quote Fetcher - AWS Lambda Function
 
 # Overview
 
-This AWS Lambda function fetches a random quote from the "Quotable" API and logs it to the console. It is designed as a simple example of integrating external APIs with AWS Lambda.
+This AWS Lambda function fetches a random quote from the "ZenQuotes" API and logs it to the console. It is designed as a simple example of integrating external APIs with AWS Lambda.
 
 # Features
 
-Fetches a random quote using the "Quotable" API.
+Fetches a random quote using the "ZenQuotes" API.
 
 Logs the quote along with its author to the console.
 
@@ -57,7 +57,7 @@ requests (must be included in a deployment package or installed in the Lambda en
 
 # Example Output
 
-Random Quote: 'Success is not final, failure is not fatal: It is the courage to continue that counts.' - Winston Churchill
+Random Quote: 'Only in the agony of parting do we look into the depths of love.' - George Eliot
 v1.1
 
 # Notes
