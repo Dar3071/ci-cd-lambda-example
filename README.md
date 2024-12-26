@@ -1,68 +1,53 @@
 # ci-cd-lambda-example
 
-Random Quote Fetcher - AWS Lambda Function
-
-This project demonstrates my ability to create and deploy serverless applications using AWS. It features a Python-based Lambda function that fetches random quotes from an API and uses an automated pipeline to install dependencies, package the code, and update the function.
+Random Quote AWS Lambda Application
 
 # Overview
 
-This AWS Lambda function fetches a random quote from the "ZenQuotes" API and logs it to the console. It is designed as a simple example of integrating external APIs with AWS Lambda.
+This project demonstrates my ability to build and deploy serverless applications using AWS Lambda. It features a Python-based function that fetches random quotes from the ZenQuotes API and includes a CI/CD pipeline for automated deployment.
 
-# Features
+# Key Features
 
-Fetches a random quote using the "ZenQuotes" API.
+Serverless Architecture - Uses AWS Lambda for scalable and event-driven execution.
 
-Logs the quote along with its author to the console.
+API Integration - Fetches data from the ZenQuotes API.
 
-Includes basic error handling for HTTP request failures.
+CI/CD Pipeline - Automates packaging and deployment with AWS CodeBuild.
 
-# Requirements
+# Skills Demonstrated
 
-Python 3.x
+Python programming
 
-AWS Lambda
+AWS Lambda and serverless development
 
-IAM role with necessary permissions for API access.
+REST API integration
+
+CI/CD pipelines and DevOps practices
 
 # Setup Instructions
 
-Create an AWS Lambda function in your AWS Management Console.
+Clone the Repository:
 
-Upload this code as a Python script.
+git clone <repository-url>
+cd <repository-folder>
 
-Configure the runtime to Python 3.x.
+Install Dependencies:Ensure Python 3.12 is installed. Create a requirements.txt file and include any dependencies.
 
-Attach a role with permissions to execute the function.
+pip install -r requirements.txt -t lib
 
-# CI/CD Integration
+Build and Package:Use the provided buildspec.yml file to create a deployment package.
 
-This project includes a buildspec.yml file for automating builds and deployments using AWS CodeBuild. It:
+zip -r9 deployment_package.zip .
 
-Installs dependencies listed in requirements.txt.
+Deploy the Lambda Function:Replace python-application with your Lambda function name.
 
-Packages the function code and dependencies into a ZIP file.
-
-Deploys the updated package to AWS Lambda using the AWS CLI.
-This ensures continuous delivery and seamless updates without manual intervention.
+aws lambda update-function-code --function-name python-application --zip-file fileb://deployment_package.zip
 
 # Usage
 
-This function can be triggered by any supported AWS Lambda event. It logs the retrieved quote in the Lambda execution logs.
-
-# Version
-
-v1.1 - Current version logs API response status and outputs a version label.
-
-# Dependencies
-
-requests (must be included in a deployment package or installed in the Lambda environment).
+The Lambda function fetches a random quote from the ZenQuotes API when triggered and logs the result in CloudWatch.
 
 # Example Output
 
-Random Quote: 'Only in the agony of parting do we look into the depths of love.' - George Eliot
-v1.1
-
-# Notes
-
-Ensure the "requests" module is included in the Lambda deployment package, as it is not built-in.
+Random Quote: 'Be yourself; everyone else is already taken.' - Oscar Wilde
 
