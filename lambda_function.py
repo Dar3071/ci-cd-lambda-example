@@ -1,4 +1,5 @@
 import requests
+import certifi
 
 def lambda_handler(event, context):
     url = "https://api.quotable.io/random"
