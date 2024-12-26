@@ -1,7 +1,7 @@
 import requests
 
 def lambda_handler(event, context):
-    url = "https://zenquotes.io/api/random"  # Alternative URL
+    url = "https://zenquotes.io/api/random"  # Quote Url
     response = requests.get(url)
 
     if response.status_code == 200:
