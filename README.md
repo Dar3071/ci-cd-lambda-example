@@ -28,20 +28,23 @@ CI/CD pipelines and DevOps practices
 
 1. Clone the Repository:
 
-git clone <repository-url>
-cd <repository-folder>
+    git clone <repository-url>
+    cd <repository-folder>
 
-2. Install Dependencies:Ensure Python 3.12 is installed. Create a requirements.txt file and include any dependencies.
+2. Install Dependencies:
+    Ensure Python 3.12 is installed. Create a requirements.txt file and include any dependencies.
 
-pip install -r requirements.txt -t lib
+    pip install -r requirements.txt -t lib
 
-3. Build and Package:Use the provided buildspec.yml file to create a deployment package.
+3. Build and Package:
+    Use the provided buildspec.yml file to create a deployment package.
 
-zip -r9 deployment_package.zip .
+    zip -r9 deployment_package.zip .
 
-4. Deploy the Lambda Function:Replace python-application with your Lambda function name.
+4. Deploy the Lambda Function:
+    Replace python-application with your Lambda function name.
 
-aws lambda update-function-code --function-name python-application --zip-file fileb://deployment_package.zip
+    aws lambda update-function-code --function-name python-application --zip-file fileb://deployment_package.zip
 
 # Usage
 
